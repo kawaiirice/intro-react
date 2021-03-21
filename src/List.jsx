@@ -20,7 +20,9 @@ class List extends React.Component {
       value: ""
     });
 
-    this.props.addFunction(this.state.value);
+    if (this.state.value !== "") {
+      this.props.addFunction(this.state.value);
+    }
     event.preventDefault();
   }
 
